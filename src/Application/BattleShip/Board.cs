@@ -39,7 +39,8 @@ namespace Application.BattleShip
             var shipCo = string.Empty;
             while (i <= ShipSize)
             {
-                shipCo += $"{colId[colIndex]}{rowIndex}";
+                shipCo += $"{colId[colIndex]}{rowIndex} ";
+                shipCo = shipCo.Trim();
                 if (shipOrientation == ShipOrientation.Horizontal)
                     colIndex++;
                 else

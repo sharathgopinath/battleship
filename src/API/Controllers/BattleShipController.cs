@@ -23,15 +23,19 @@ namespace API.Controllers
         }
 
         [HttpGet("new")]
-        public ActionResult<string> Get()
+        public ActionResult<NewGameOutputVM> Get()
         {
             var vm = _battleShipService.NewGame();
-
             try
             {
-                return _encryptionService.Encrypt(vm);
+                return new NewGameOutputVM
+                {
+                    GameProgressCode = _encryptionService.Encrypt(vm),
+                    Hits = vm.Hits,
+                    Misses = vm.Misses
+                };
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 return StatusCode((int)HttpStatusCode.InternalServerError);
             }
