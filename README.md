@@ -1,6 +1,6 @@
 # Battleship State Tracking API
-An API to track the status of a Battleship game.
-Board size - 10x10
+An API to track the status of a Battleship game.\
+Board size - 10x10\
 Co-ordinates - a1, b1, c1... to j10
 
 ## API Endpoints
