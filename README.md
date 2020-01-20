@@ -4,9 +4,9 @@ Board size - 10x10
 Co-ordinates - a1, b1, c1... to j10
 
 ## API Endpoints
-HTTP GET **api/battle-ship/new**
+**HTTP GET api/battle-ship/new**
 
-Creates a new board and adds a battleship to the board
+Creates a new board and adds a battleship to the board.
 
 Example Output - 
 ```
@@ -17,9 +17,9 @@ Example Output -
 }
 ```
 
-HTTP POST **api/battle-ship/game-status**
+**HTTP POST api/battle-ship/game-status**
 
-Returns the current status of the game
+Returns the current status of the game.
 
 Example Input - 
 ```
@@ -41,9 +41,10 @@ Example Output -
 }
 ```
 
-HTTP POST **api/battle-ship/attack**
+**HTTP POST api/battle-ship/attack**
 
-Attack at a given position, reports back with the current status of the game
+Attack at a given position. Reports back with the current status of the game.
+
 **Note** Ensure you send the updated 'gameProgressCode' for subsequent requests to this API endpoint to maintain the game's progress
 
 Example Input - 
